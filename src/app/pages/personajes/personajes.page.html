@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Personajes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header> Recent Conversations </ion-list-header>
+    <ion-item *ngFor="let person of personajes;" trackBy:trackPersonajes>
+      <ion-avatar slot="start">
+        <img [src]="person.img" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{person.nombre}}</h2>
+        <button slot="end" (click)="viewPerson(person)" class="btn btn-{{person.nombre}}">Ver a {{person.nombre}}</button>
+      </ion-label>
+    </ion-item>
+
+    </ion-list>
+</ion-content>

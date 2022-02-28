@@ -1,0 +1,26 @@
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.btn {
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn-Sarada {
+  background-color: #dd4455;
+}
+
+.btn-Boruto {
+  background-color: #3311dd;
+}
+
+.btn-Metal {
+  background-color: #55aa44;
+}
+
