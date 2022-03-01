@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { MomentosPageRoutingModule } from './momentos-routing.module';
 
 import { MomentosPage } from './momentos.page';
+import { ModalPage } from './modal.page';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { MomentosPage } from './momentos.page';
     IonicModule,
     MomentosPageRoutingModule
   ],
-  declarations: [MomentosPage]
+  declarations: [MomentosPage, ModalPage],
+  entryComponents: [ModalPage]
 })
 export class MomentosPageModule {}

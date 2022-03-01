@@ -6,16 +6,26 @@
 
 <ion-content>
   <ion-list>
-    <ion-list-header> Lista de personajes </ion-list-header>
-    <ion-item *ngFor="let moment of moments;" trackBy:trackPersonajes>
+    <!-- <ion-list-header>Momentos Del Anime</ion-list-header> -->
+    <ion-item button *ngFor="let moment of moments;" (click)="viewMoment(moment)">
       <ion-avatar slot="start">
         <img [src]="moment.img" />
       </ion-avatar>
       <ion-label>
         <h2>{{moment.titulo}}</h2>
-        <button slot="end" (click)="viewPerson(moment)" class="btn btn-sarada">Ver momento</button>
       </ion-label>
     </ion-item>
-
+    <!-- <ion-modal [isOpen]="false">
+      <ng-template>
+        <ion-content>
+          <video id='my-video' controls style="width: 640px; height: 360px;">
+            <source [src]='moment.video' title='1080p' type='video/mp4' />
+          </video>
+        </ion-content>
+      </ng-template>
+    </ion-modal> -->
+    <!-- <video id='video_id' controls style="width: 640px; height: 360px;">
+      <source [src]='moment.video' title='1080p' type='video/mp4' />
+    </video> -->
     </ion-list>
 </ion-content>
