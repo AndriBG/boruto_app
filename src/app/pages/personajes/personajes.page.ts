@@ -40,7 +40,7 @@ export class PersonajesPage implements OnInit {
   async viewPerson(e){
     const alert = await this.alertCtrl.create({
       header: 'Detalles de personaje',
-      subHeader: `<img src="${e.img}" />`,
+      subHeader: `${e.nombre}`,
       message: `${e.nombre} tiene ${e.edad} años y ${e.descripcion}`,
       buttons: [{
         text: 'Cerrar a ' + e.nombre,

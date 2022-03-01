@@ -1,9 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>momentos</ion-title>
+    <ion-title>Momentos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-list-header> Lista de personajes </ion-list-header>
+    <ion-item *ngFor="let moment of moments;" trackBy:trackPersonajes>
+      <ion-avatar slot="start">
+        <img [src]="moment.img" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{moment.titulo}}</h2>
+        <button slot="end" (click)="viewPerson(moment)" class="btn btn-sarada">Ver momento</button>
+      </ion-label>
+    </ion-item>
 
+    </ion-list>
 </ion-content>
